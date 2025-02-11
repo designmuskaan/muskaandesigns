@@ -1,0 +1,503 @@
+
+
+/*Homepage*/
+
+body {
+  cursor: url('orange-square.png'), auto;
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  padding: 0;
+ 
+  
+}
+
+.header {
+  background-color: blue;
+  text-align: center;
+  padding: 20px 0;
+  margin: 0;
+  z-index: 1000; /* Ensure header is above navbar */
+}
+
+
+/*Image gallery styling*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  margin-top: 20px; /* Add margin to accommodate navbar */
+}
+
+.project {
+  position: relative;
+  width: 30%;
+  margin-bottom: 30px;
+}
+
+.project img {
+  width: 100%;
+  height: 80vh; /* Adjust the height as needed */
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 45, 0, 0.85); /* Fix RGBA syntax */
+  color: white;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description {
+  text-align: center;
+  padding: 20px;
+}
+
+.project:hover .overlay {
+  display: flex;
+}
+
+/* Navbar styles */
+.navbar {
+  position: fixed;
+  top: 0; /* Place navbar at the top */
+  left: 0; /* Ensure it's aligned to the left */
+  margin: 0;
+  width: 100%;
+  height: 50px;
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(24, 47, 213);
+  z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+}
+
+.nav-link:hover {
+  background-color: rgb(234, 71, 30);
+}
+
+/* About Me Section */
+.logo-container {
+  position: relative;
+  margin-top: 20px;
+  z-index: 1;
+}
+
+.moving-logo {
+  width: 80vw;
+  height: auto;
+  animation: moveLogo 2s infinite alternate;
+}
+
+@keyframes moveLogo {
+  0% {
+      transform: translateX(0);
+  }
+
+  50% {
+      transform: translateY(90px);
+  }
+
+  100% {
+      transform: translateX(40px);
+  }
+}
+
+.bubble {
+  position: absolute;
+  background-color: rgba(111, 226, 255, 0.7);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  pointer-events: none; /* Ensure bubbles don't interfere with clicks */
+  z-index: 0;
+}
+
+/*Image gallery background styling*/
+.blue-section {
+  margin-top: 140px;
+  position: relative;
+  height: 108vh;
+  width: 100vw;
+  background-color: rgb(24, 47, 213); /* Blue background color */
+  padding: 20px;
+  text-align: center;
+  z-index: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.blue-section h2 {
+  margin-top: 15px;
+  color: #fff; /* White text color */
+  font-size: 25pt;
+}
+
+.blinking-text {
+  animation: blink-animation 1s infinite;
+}
+
+@keyframes blink-animation {
+  0% {
+    color: rgb(223, 96, 65);
+  }
+  50% {
+    color: white;
+  }
+  100% {
+    color: rgb(223, 96, 65);
+  }
+}
+
+
+/* Style the Fancybox caption */
+.fancybox__slide.has-caption {
+  flex-direction: row;
+}
+
+.fancybox-caption {
+  max-width: 300px;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+/*Vault Page*/
+
+
+/*
+=Page Wrapper
+============================================= */
+
+.pge-wrapper {
+  max-width: 1200px;
+  margin: 50px auto;
+}
+
+
+/*
+=style the header */
+header {
+  background-color: rgb(245 245 245/ 0.75);
+  position: fixed;
+  z-index: 1;
+  top: 0; left: 0;
+  width: 100%;
+}
+
+/*
+=style the inside wrapper */
+.ins-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+/*
+
+
+
+/*
+=Image Gallery
+============================================= */
+/*
+=style the gallery (flex container) */
+.img-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px, auto;
+}
+
+/*
+=Image Wrapper
+============================================= */
+/*
+=style the image wrapper (flex items) */
+.img-wrapper {
+  margin: 0;
+  padding: 5px;
+  position: relative;
+}
+
+
+/*
+=Images
+============================================= */
+/*
+=style the images */
+.img-wrapper img {
+  width: 100%;
+  display: block;
+  box-shadow: 1px 1px 2px rgb(218 218 218);
+}
+
+/*
+=Anchor Elements
+============================================= */
+/*
+=style the anchor elements */
+.img-wrapper a {
+  color: transparent;
+  text-transform: uppercase;
+  font-size: smaller;
+  letter-spacing: 1.2px;
+
+  position: absolute;
+  top: 5px; right: 5px; bottom: 5px; left: 5px;
+  /* right: 5px; bottom: -5px; left: 5px; */
+
+  display: flex;
+  align-items: center;
+
+  transition-duration: 0.35s;
+  transition-timing-function: ease;
+
+  padding: 10px;
+}
+
+
+/*
+=style the hover event */
+.img-wrapper a:hover {
+ background-color: rgb(255 45 0/ 0.85);
+ color: white;
+  top: 5px; right: 5px; bottom: 5px; left: 5px;
+
+}
+
+/*
+=Link States
+============================================= */
+a {text-decoration: none;}
+
+/* ========================================== */
+
+/*
+=Media Queries
+============================================= */
+/*
+=X-Small Screen < 576px */
+@media (max-width: 575.98px) {
+.pge-wrapper { padding: 0 20px 40px; } /* top left-right bottom */
+.ins-wrapper { padding: 0 20px; }      /* top-bottom left-right */
+.img-wrapper { flex: 0 0 50%;          /* ensure the ‹figure› elements claim exactly half the available space */
+}
+}
+
+/*
+=Small Screen ≥ 576px */
+@media (min-width: 576px) {
+.pge-wrapper { padding: 0 20px 60px; } /* top left-right bottom */
+.ins-wrapper { padding: 0 20px; }      /* top-bottom left-right */
+.img-wrapper { flex: 0 0 33.3333%; }   /* ensure each ‹figure› element claims exactly one-third the available space */
+}
+
+/*
+=Medium Screen ≥ 768px */
+@media (min-width: 768px) {
+.pge-wrapper { padding: 0 60px 80px; } /* top left-right bottom */
+.ins-wrapper { padding: 0 60px; }      /* top-bottom left-right */
+}
+
+/*
+=Large Screen ≥ 992px */
+@media (min-width: 992px) {
+.pge-wrapper { padding: 0 60px 80px; } /* top left-right bottom */
+.ins-wrapper { padding: 0 60px; }      /* top-bottom left-right */
+.img-wrapper { flex: 0 0 50%; }         /* ensure each ‹figure› element claims exactly half the available space */
+}
+
+/* ========================================== */
+
+
+
+
+
+
+/*Mingle Page*/
+.container {
+  max-width: 800px;
+  margin: 10px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  /* box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro img {
+  width: 30vw;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.contact-info {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.contact-info h2 {
+  font-size: 24px;
+  color: rgb(24 47 213);
+}
+
+.contact-info p {
+  font-size: 16px;
+  color: rgb(234 71 30);
+  margin-bottom: 10px;
+}
+
+.sticky-notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.sticky-note {
+  position: relative; /* Added position relative */
+  width: 300px;
+  height: 300px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #1d27df;
+  border-radius: 3px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sticky-note:hover {
+  transform: rotate(3deg);
+  background-color: rgb(234 71 30);
+}
+
+.sticky-note.image-note {
+  padding: 0;
+}
+
+.sticky-note.image-note img {
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+  border-radius: 2px; /* Optional: To match the rounded corners of the container */
+  margin: 0;
+  padding: 0;
+}
+
+.sticky-note .content {
+  color: #f4ecec;
+  text-align: left;
+}
+
+.sticky-note p {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.peek-text {
+  position: absolute;
+  bottom: -100%; /* Initially position outside the sticky note */
+  left: 0;
+  right: 0;
+  background-color: #1d27df;
+  color: white;
+  padding: 10px;
+  transition: bottom 0.3s ease-in-out; /* Transition bottom position */
+}
+
+.sticky-note:hover .peek-text {
+  bottom: 0; /* Move up to reveal the text on hover */
+}
+
+
+.resume-popup {
+  position: absolute;
+  bottom: -100%; /* Initially position outside the sticky note */
+  left: 0;
+  right: 0;
+  background-color: #1d27df;
+  color: rgb(255, 255, 255);
+  padding: 10px;
+  transform-origin: bottom; /* Set transform origin to bottom */
+  transform: scaleY(0); /* Initially hide the popup */
+  transition: transform 0.3s ease-in-out; /* Transition for scaling */
+  pointer-events: none; /* Disable pointer events to prevent interaction */
+}
+
+.sticky-note:hover .resume-popup {
+  transform: scaleY(1); /* Scale up to reveal the popup */
+  pointer-events: auto; /* Enable pointer events when hovering over the sticky note */
+}
+.resume-popup a {
+  color: #fff; /* Set link text color to white */
+}
+
+.sticky-note:hover .resume-popup {
+  bottom: 0; /* Move up to reveal the text on hover */
+}
+
+.name {
+  color:  #1d27df;;
+}
+
+.exclaim {
+  color: rgb(234 71 30);
+}
+
+.period {
+  color: rgb(234 71 30);
+}
+
+footer {
+  color:  #1d27df;
+  font-weight: 300;
+  padding: 7px;
+  margin-left: 30px;
+  margin-top: -10px;
+  padding-bottom: 10px;
+
+}
+
+
+
+
+
+
